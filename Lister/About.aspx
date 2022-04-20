@@ -1,55 +1,19 @@
 ﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="Lister.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    
-<div id="title">Lister</div>
-<div id="main">
-<div class="box red">
-  <h3>List Name</h3>
-  
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet mauris id odio ornare sollicitudin. Aenean vitae turpis non elit imperdiet pellentesque. Maecenas dolor augue, interdum ac mi a, condimentum aliquam augue. Cras ornare ac lacus viverra hendrerit. Pellentesque quis eros tortor. Nam ullamcorper a felis nec malesuada.</p>
-</div>
 
-<div class="box orange">
-  <h3>List Name</h3>
-  
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet mauris id odio ornare sollicitudin. Aenean vitae turpis non elit imperdiet pellentesque. Maecenas dolor augue, interdum ac mi a, condimentum aliquam augue. Cras ornare ac lacus viverra hendrerit. Pellentesque quis eros tortor. Nam ullamcorper a felis nec malesuada.</p>
-</div>
+    <h2><%: Title %>.</h2>
+    <h3>This is where you will make your lists</h3>
+    <asp:Panel ID="pnlAddLists" runat="server" ClientIDMode="Static">
+        <label for="txtTitle">Add your lists here</label>
+        <br />
+        <asp:TextBox ID="txtTitle" runat="server" ClientIDMode="Static"></asp:TextBox>
+        <asp:Label ID="lblFeedback" runat="server" Visible="False"></asp:Label>
+        <asp:RequiredFieldValidator ID="rfvTitle" runat="server" ControlToValidate="txtTitle" ErrorMessage="Characters Required" ForeColor="Red"></asp:RequiredFieldValidator>
+        <br />
+        <asp:Button ID="btnTitle" runat="server" ClientIDMode="Static" OnClick="btnSubmit_Click" Text="Add List" />
 
-<div class="box yellow">
-  <h3>List Name</h3>
-  
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet mauris id odio ornare sollicitudin. Aenean vitae turpis non elit imperdiet pellentesque. Maecenas dolor augue, interdum ac mi a, condimentum aliquam augue. Cras ornare ac lacus viverra hendrerit. Pellentesque quis eros tortor. Nam ullamcorper a felis nec malesuada.</p>
-</div>
+    </asp:Panel>
 
-<div class="box green">
-  <h3>List Name</h3>
-  
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet mauris id odio ornare sollicitudin. Aenean vitae turpis non elit imperdiet pellentesque. Maecenas dolor augue, interdum ac mi a, condimentum aliquam augue. Cras ornare ac lacus viverra hendrerit. Pellentesque quis eros tortor. Nam ullamcorper a felis nec malesuada.</p>
-</div>
 
-<div class="box blue">
-  <h3>List Name</h3>
-  
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet mauris id odio ornare sollicitudin. Aenean vitae turpis non elit imperdiet pellentesque. Maecenas dolor augue, interdum ac mi a, condimentum aliquam augue. Cras ornare ac lacus viverra hendrerit. Pellentesque quis eros tortor. Nam ullamcorper a felis nec malesuada.</p>
-</div>
-
-<div class="box aqua">
-  <h3>List Name</h3>
-  
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet mauris id odio ornare sollicitudin. Aenean vitae turpis non elit imperdiet pellentesque. Maecenas dolor augue, interdum ac mi a, condimentum aliquam augue. Cras ornare ac lacus viverra hendrerit. Pellentesque quis eros tortor. Nam ullamcorper a felis nec malesuada.</p>
-</div>
-
-<div class="box purple">
-  <h3>List Name</h3>
-  
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet mauris id odio ornare sollicitudin. Aenean vitae turpis non elit imperdiet pellentesque. Maecenas dolor augue, interdum ac mi a, condimentum aliquam augue. Cras ornare ac lacus viverra hendrerit. Pellentesque quis eros tortor. Nam ullamcorper a felis nec malesuada.</p>
-</div>
-
-<div class="box pink">
-  <h3>List Name</h3>
-  
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet mauris id odio ornare sollicitudin. Aenean vitae turpis non elit imperdiet pellentesque. Maecenas dolor augue, interdum ac mi a, condimentum aliquam augue. Cras ornare ac lacus viverra hendrerit. Pellentesque quis eros tortor. Nam ullamcorper a felis nec malesuada.</p>
-</div>
-</div>
 </asp:Content>
