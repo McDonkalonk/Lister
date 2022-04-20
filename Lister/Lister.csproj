@@ -105,7 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="Lists.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
@@ -170,12 +170,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Lists.aspx.cs">
+      <DependentUpon>Lists.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Lists.aspx.designer.cs">
+      <DependentUpon>Lists.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contact.aspx.cs">
