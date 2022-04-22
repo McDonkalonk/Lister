@@ -12,7 +12,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -37,7 +37,6 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -57,11 +56,21 @@
                 </div>
             </div>
         </div>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
+            <footer class="w-100 py-4 flex-shrink-0 text-center">
+                <div class="container py-4">
+                    <div class="row gy-4 gx-5">
+                        <div class="col-sm-text-center">
+                            <h5 class="">LISTER</h5>
+                            <p class="small text-muted">The best website ever known to man.</p>
+                            <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Lister.com</a></p>
+                        </div>
+                    </div>
+                </div>
                 <p>&copy; <%: DateTime.Now.Year %> - Lister</p>
             </footer>
         </div>

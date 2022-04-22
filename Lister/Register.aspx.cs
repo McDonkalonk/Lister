@@ -23,11 +23,13 @@ namespace Lister
             if(Page.IsValid)
             {
                 string email = txtEmail.Text.Trim();
+                string username = txtUsername.Text.Trim();
                 string password = txtPassword.Text.Trim();
+                
 
                 if(!IsEmailRegistered(email))
                 {
-                    RegisterUser(email, password);
+                    RegisterUser(email, username, password);
                 }
                 else
                 {
@@ -36,7 +38,7 @@ namespace Lister
             }
         }
 
-        private void RegisterUser(string email, string password)
+        private void RegisterUser(string email, string username, string password)
         {
             using (SqlConnection conn = new SqlConnection())
             {
@@ -45,7 +47,8 @@ namespace Lister
                 string hashedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(password, "SHA1");
 #pragma warning restore CS0618 // Type or member is obsolete
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "INSERT INTO Users(Email, HashedPassword) VALUES('" + email + "', '" + hashedPassword + "')"; ;
+                cmd.CommandText = "INSERT INTO User(Email, Username, HashedPassword) VALUES('" + email + "', '" + username + "', '" + hashedPassword + "')"; 
+                
                 cmd.Connection = conn;
                 conn.Open();
 

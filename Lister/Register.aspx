@@ -3,8 +3,11 @@
     <div class="form-group">
         <label for="txtEmail">Email</label>
         <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" ClintIDMode="Static"></asp:TextBox>
+        <label for="txtUsername">Username</label>
+        <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" ClientIDMode="Static"></asp:TextBox>
         <label for="txtPassword">Password</label>
         <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" ClintIDMode="Static" TextMode="Password"></asp:TextBox>
+       
     </div>
     <div class="form-group">
         <asp:Button ID="btnRegister" runat="server" CssClass="btn btn-primary" Text="Register" />
