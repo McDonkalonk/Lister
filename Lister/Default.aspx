@@ -5,7 +5,10 @@
     <div class="jumbotron">
         <h1>Lister</h1>
         <p class="lead">A free website that helps you organize your life whether it be for short or long term!</p>
-        <p><a href="https://localhost:44378/Register.aspx" class="btn btn-primary btn-lg">Sign Up &raquo;</a></p>
+        <p>
+            <a href="https://localhost:44378/Register.aspx" class="btn btn-primary btn-lg">Sign Up &raquo;</a>
+            <a href="https://localhost:44378/SignIn.aspx" class="btn btn-primary btn-lg">Sign In &raquo;</a>
+        </p>
     </div>
 
     <div class="row">
