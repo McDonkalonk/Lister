@@ -6,7 +6,7 @@
         <label for="txtUsername">Username</label>
         <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" ClientIDMode="Static"></asp:TextBox>
         <label for="txtPassword">Password</label>
-        <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" ClintIDMode="Static" TextMode="Password"></asp:TextBox>
+        <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" ClintIDMode="Static" TextMode="Password" OnTextChanged="txtPassword_TextChanged"></asp:TextBox>
        
     </div>
     <div class="form-group">

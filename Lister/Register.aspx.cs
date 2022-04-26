@@ -54,7 +54,7 @@ namespace Lister
 
                 if(cmd.ExecuteNonQuery() == 1)
                 {
-                    Response.Redirect("Signin.aspx");
+                    Response.Redirect("SignIn.aspx");
                 }
                 else
                 {
@@ -86,6 +86,11 @@ namespace Lister
                     return false;
                 }
             }
+        }
+
+        protected void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
